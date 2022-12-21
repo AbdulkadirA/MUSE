@@ -320,7 +320,7 @@ Include: yum
 	&& cd .. \
 	&& mv -v nifti_clib nifticlib-2.0.0 \
 	&& cd /opt/cbica/software/nifticlib-2.0.0/ \
-	&& make all > /opt/cbica/src/nifticlib-2.0.0/make.log 2>&1 \
+	&& make -j4 all > /opt/cbica/src/nifticlib-2.0.0/make.log 2>&1 \
 	&& make install > /opt/cbica/src/nifticlib-2.0.0/install.log 2>&1 \
 	&& rm -f /opt/cbica/software/nifticlib-2.0.0/nifticlib-2.0.0.tar.gz
 	
@@ -369,7 +369,7 @@ Include: yum
 		-D BUILD_DOCUMENTATION=OFF \
 		-D CMAKE_INSTALL_PREFIX=/opt/cbica/software/basis-2.1.4 \
 		../BASIS > /opt/cbica/src/basis-2.1.4/cmake.log 2>&1 \
-	&& make > /opt/cbica/src/basis-2.1.4/make.log 2>&1 \
+	&& make -j4 > /opt/cbica/src/basis-2.1.4/make.log 2>&1 \
 	&& make install > /opt/cbica/src/basis-2.1.4/install.log 2>&1 \
 	&& rm -rf /opt/cbica/src/basis-2.1.4/BASIS \
 		/opt/cbica/src/basis-2.1.4/build
@@ -403,7 +403,7 @@ Include: yum
 	&& cd /opt/cbica/software/dramms-fastpd \
 	&& /opt/cbica/software/cmake-3.11.4/bin/cmake \
 		-D CMAKE_BUILD_TYPE:STRING=Release . > /opt/cbica/src/fastpd/cmake.log 2>&1 \
-	&& make > /opt/cbica/src/fastpd/make.log 2>&1 \
+	&& make -j4 > /opt/cbica/src/fastpd/make.log 2>&1 \
 	&& rm -rf /opt/cbica/src/fastpd/FastPD_DemoVersion.zip
 
 	# DRAMMS
@@ -417,7 +417,7 @@ Include: yum
 		-D DRAMMSFastPD_DIR=/opt/cbica/software/dramms-fastpd \
 		-D CMAKE_INSTALL_PREFIX=/opt/cbica/software/dramms-1.4.1 \
 		../ > /opt/cbica/src/dramms-1.4.1/cmake.log 2>&1 \
-	&& make > /opt/cbica/src/dramms-1.4.1/make.log 2>&1 \
+	&& make -j4 > /opt/cbica/src/dramms-1.4.1/make.log 2>&1 \
 	&& make clean > /opt/cbica/src/dramms-1.4.1/clean.log 2>&1 \
 	&& make install > /opt/cbica/src/dramms-1.4.1/install.log 2>&1 \
 	&& rm -rf /opt/cbica/src/dramms-1.4.1/DRAMMS
@@ -464,7 +464,7 @@ Include: yum
 		-D CMAKE_INSTALL_PREFIX=/opt/cbica/software/mass-1.1.1 \
 		-D SCHEDULER=NONE \
 		../MASS > /opt/cbica/src/mass-1.1.1/cmake.log 2>&1 \
-	&& make > /opt/cbica/src/mass-1.1.1/make.log 2>&1 \
+	&& make -j4 > /opt/cbica/src/mass-1.1.1/make.log 2>&1 \
 	&& make install > /opt/cbica/src/mass-1.1.1/install.log 2>&1 \
 	&& chmod 755 /opt/cbica/software/mass-1.1.1 -R \
 	&& rm -rf /opt/cbica/src/mass-1.1.1/mass-1.1.1-build \
@@ -497,7 +497,7 @@ Include: yum
 		-D CMAKE_INSTALL_PREFIX=/opt/cbica/software/muse-3.1.0 \
 		-D SCHEDULER=NONE \
 		../MUSE > /opt/cbica/src/muse-3.1.0/cmake.log 2>&1 \
-	&& make > /opt/cbica/src/muse-3.1.0/make.log 2>&1 \
+	&& make -j4 > /opt/cbica/src/muse-3.1.0/make.log 2>&1 \
 	&& make install > /opt/cbica/src/muse-3.1.0/install.log 2>&1 \
 	&& chmod 755 /opt/cbica/software/muse-3.1.0 -R \
 	&& rm -rf /opt/cbica/src/muse-3.1.0/MUSE \
