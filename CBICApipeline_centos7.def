@@ -229,8 +229,7 @@ Include: yum
 	&& mv -v /opt/cbica/software/fsl /opt/cbica/software/fsl-5.0.11 \
 	&& echo "Installing fsl-5.0.11 conda environment ..." \
 	&& bash /opt/cbica/software/fsl-5.0.11/etc/fslconf/fslpython_install.sh \
-		-f /opt/cbica/software/fsl-5.0.11 > /opt/cbica/src/fsl-5.0.11/fslpython.log 2>&1 \
-	&& rm -rf /opt/cbica/src/fsl-5.0.11/fsl-5.0.11-centos7_64.tar.gz
+		-f /opt/cbica/software/fsl-5.0.11 > /opt/cbica/src/fsl-5.0.11/fslpython.log 2>&1
 
 %test
 	echo -e "\nTesting fsl exec(s)"
