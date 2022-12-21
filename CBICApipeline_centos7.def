@@ -75,9 +75,9 @@ Include: yum
 	yum update -y
 
 	yum install -y epel-release
-	yum install -y tcsh libXp openmotif gsl xorg-x11-fonts-misc       \
-                    PyQt4 R-devel netpbm-progs gnome-tweak-tool ed     \
-                    libpng12 xorg-x11-server-Xvfb firefox
+	yum install -y tcsh openmotif gsl \
+                    PyQt4 R-devel netpbm-progs ed \
+                    libpng12
 	yum update -y
 	
 	curl -s \
