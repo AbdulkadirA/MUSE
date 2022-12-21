@@ -4,6 +4,11 @@ MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearc
 UpdateURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/updates/$basearch/
 Include: yum
 
+# Note, the yum bootstrap method requires the yum command in the base system in
+# which the container is buildt. Newer distributions such as Ubuntu 20.04 do not
+# provide this package. On Windows, we recommend to use WSL CentOS7 to build the
+# image.
+
 %labels
 	Author Jimit.Doshi@pennmedicine.upenn.edu
 	Version v1.0.0
